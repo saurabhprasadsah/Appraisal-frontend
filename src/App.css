@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: "Afacad", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Afacad", sans-serif;
+}
+
+.container{
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+button{
+    background-color: #191922;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #272626;
+}
+@media (min-width:768px) {
+ .container{
+  max-width: 712px;
+ }   
+}
+@media (min-width:1024px) {
+ .container{
+  max-width: 991px;
+ }   
+}
+
+@media (min-width:1200px) {
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width:1400px) {
+  .container{
+    max-width: 1200px;
+  }
+}
+@media (min-width:1600px) {
+  .container{
+    max-width: 1400px;
+  }
+}

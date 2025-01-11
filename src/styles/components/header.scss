@@ -1,0 +1,151 @@
+.header {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem 2rem;
+
+  .container {
+    .upper-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+
+      .logo {
+        height: 30px;
+
+        @media (min-width: 768px) {
+          height: 40px;
+        }
+      }
+
+      .navbar {
+        padding: 10px 20px;
+        color: black;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: 768px) {
+          display: flex;
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+          gap: 4rem;
+
+          li {
+            a {
+              font-size: 14px;
+              color: black;
+              text-decoration: none;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            .disabled-link {
+              pointer-events: none; /* Disable clicking */
+              color: gray; /* Change the appearance to indicate it's disabled */
+              cursor: not-allowed; /* Make the cursor not change on hover */
+            }
+            
+
+            @media (min-width: 1024px) {
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-button {
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        display: block;
+        color: #000;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .sm-sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+      padding: 1rem;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(100%);
+      z-index: 1000;
+
+      &.open {
+        display: block;
+        transform: translateX(0);
+      }
+
+      &.close {
+        transform: translateX(100%);
+      }
+
+      .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.207);
+        margin-bottom: 1rem;
+
+        p {
+          color: #000;
+          margin: 0;
+          font-size: 1.5rem;
+        }
+
+        .close-button {
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+          margin-bottom: 1rem;
+          align-self: flex-end;
+          color: #000;
+        }
+      }
+
+      .sidebar-nav {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          li {
+            a {
+              text-decoration: none;
+              font-size: 1rem;
+              color: black;
+              transition: color 0.2s ease-in-out;
+
+              &:hover {
+                color: #007bff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
