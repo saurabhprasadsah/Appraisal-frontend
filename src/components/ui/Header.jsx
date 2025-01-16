@@ -7,7 +7,7 @@ const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate(); // Use navigate for redirection
 
-  // Get the logged-in user from localStorage
+  // Get the logged-in user from localStorages
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
   // Get allowed routes for the current user
